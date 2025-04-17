@@ -5,7 +5,7 @@ import com.notes.page.MainPage;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.Test;
 
-public class TestAddNoteFromMainPage {
+public class TestAddNoteFromMainPage extends BaseTest {
     @Test(description = "Проверка добавления новых записей",
             dataProviderClass = NoteDataProvider.class,
             dataProvider = "note")

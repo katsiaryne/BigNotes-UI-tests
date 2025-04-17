@@ -19,6 +19,7 @@ public class StaticsPage extends BasePage<StaticsPage> {
     private final SelenideElement pageStatisticDate = $(".pageStatistic__date");
     private final SelenideElement calendarMonthYear = $(".day__month_btn");
     private static final String calendarLocatorString = ".vdp-datepicker.baseCalendar.pageStatistic__calendar";
+    private final SelenideElement calendar = $(".baseCalendar__calendar.vdp-datepicker__calendar");
     private final ElementsCollection notesList = $$(".articlePreview.pageStatistic__article");
     private final By noteTitleLocator = byClassName("articlePreview__title");
     private final By noteTextLocator = byClassName("articlePreview__text");
@@ -26,7 +27,7 @@ public class StaticsPage extends BasePage<StaticsPage> {
     private final By editNoteButtonLocator = byXpath("//button[@class='articlePreview__button'][2]");
 
     public StaticsPage setDate(String day, String month, String year) {
-        pageStatisticDate.shouldBe(visible);
+        calendar.shouldBe(visible);
         executeJavaScript("document.querySelector(arguments[3]).__vue__.setDate(new Date(arguments[0],arguments[1],arguments[2]))", year, month, day, calendarLocatorString);
         return this;
     }
