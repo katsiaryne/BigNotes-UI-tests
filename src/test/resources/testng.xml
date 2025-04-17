@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/aqa/ui-tests/bignotes-selenide">
+        <classes>
+            <class name="com.notes.TestAddNoteFromItemPage">
+                <methods>
+                    <include name="testCreateNoteFromCreatePage"/>
+                </methods>
+            </class>
+            <class name="com.notes.TestAddNoteFromMainPage">
+                <methods>
+                    <include name="testCreateNoteFromMainPage"/>
+                </methods>
+            </class>
+            <class name="com.notes.TestDatePicker">
+                <methods>
+                    <include name="testSetDatePicker"/>
+                </methods>
+            </class>
+            <class name="com.notes.TestNoteEdit">
+                <methods>
+                    <include name="testCreateNoteAndEdit"/>
+                </methods>
+            </class>
+            <class name="com.notes.TestNoteIntegrity">
+                <methods>
+                    <include name="testNoteIntegrity"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
